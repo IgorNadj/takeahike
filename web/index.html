@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>		
+		<style>
+	      html, body {
+	        height: 100%;
+	        margin: 0;
+	        padding: 0;
+	      }
+	      #map {
+	        height: 100%;
+	      }
+	      .map-filters {
+	      	background: rgba(255,0,0,0.1);
+	      	height: 5em;
+	      }
+	    </style>
+	 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	</head>
+	<body>
+		<header>hellow</header>
+		<div class="map-filters">
+			<form>
+				<label>
+					Huts
+					<input type="checkbox" name="huts" type="checkbox" /> 
+				</label>
+				<label>
+					Campsites
+					<input type="checkbox" name="campsites" type="checkbox" /> 
+				</label>
+			</form>
+		</div>
+		<div id="map"></div>
+		<script>
+	      var map;
+	      function initMap() {
+	        map = new google.maps.Map(document.getElementById('map'), {
+	          center: {lat: -41.294321743457196, lng: 174.77821630859376},
+	          zoom: 12
+	        });
+	        $(document).ready(function(){
+	        	var types = ['huts', 'campsites', 'tracks'];
+	        	for(var i in types){
+	        		var type = types[i];
+	        		$.get('http://localhost/'+type, function(dataStr){
+		        		var data = JSON.parse(dataStr);
+		        		console.log('data: ', data);
+		        		for(var i in data.rows){
+		        			var row = data.rows[i];
+		        			if(type == 'tracks'){
+		        				for(var j in row.paths){
+		        					var polyline = new google.maps.Polyline({
+										path: row.paths[j],
+										geodesic: true,
+										strokeColor: '#FF0000',
+										strokeOpacity: 1.0,
+										strokeWeight: 2
+									});
+									polyline.setMap(map);
+		        				}
+		        			}else{
+		        				var marker = new google.maps.Marker({
+						            map: map,
+						            title: row.name,
+						            position: new google.maps.LatLng(row.lat, row.long)
+						        });
+		        			}
+		        		}
+		        	});
+	        	}
+	        });
+	      }
+	    </script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASMJ6VOD39mLNw_OLe54SPwWVxEqzr6zI&callback=initMap" async defer></script>
+	</body>
+</html>
