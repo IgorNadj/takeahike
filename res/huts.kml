@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<kml xmlns:atom="http://www.w3.org/2005/Atom" xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>GeoportalServices/DOC_Huts (MapServer)</name>
+    <atom:link type="text/html" href="http://geoportal.doc.govt.nz/ArcGIS/rest/services/GeoportalServices/DOC_Huts/MapServer" rel="alternate" />
+    <Placemark>
+      <name>GeoportalServices/DOC_Huts (MapServer)</name>
+      <Snippet><![CDATA[Department of Conservation - Huts. Spatial representation of DOC managed huts represented as a centroid (point) using New Zealand Transverse Mercator co-ordinates.]]></Snippet>
+      <description><![CDATA[
+<table>
+<tr valign="top">
+<td>
+<img src="http://geoportal.doc.govt.nz/ArcGIS/rest/services/GeoportalServices/DOC_Huts/MapServer/export?bbox=25915.3846905732,4227110.98859911,3038236.99270675,6684733.98848954&imageSR=4326&size=150,150&f=image"/>
+<br/><a href="http://geoportal.doc.govt.nz/ArcGIS/rest/services/GeoportalServices/DOC_Huts/MapServer">More...</a></td>
+</td>
+<td>
+Title: <b></b><br />
+Author: <b></b><br />
+Comments: <b></b><br />
+Subject: <b></b><br />
+Category: <b></b><br />
+Keywords: <b></b><br />
+Credits: <b></b><br />
+</td>
+</tr>
+</table>
+<br/>
+<b>View In:</b>
+&nbsp;&nbsp;<a href="http://geoportal.doc.govt.nz/ArcGIS/rest/services/GeoportalServices/DOC_Huts/MapServer?f=lyr">ArcMap</a>
+&nbsp;&nbsp;<a href="http://geoportal.doc.govt.nz/ArcGIS/rest/services/GeoportalServices/DOC_Huts/MapServer?f=nmf">ArcGIS Explorer</a>
+&nbsp;&nbsp;<a href="http://geoportal.doc.govt.nz/ArcGIS/rest/services/GeoportalServices/DOC_Huts/MapServer?f=jsapi" target="_blank">ArcGIS JavaScript</a>
+&nbsp;&nbsp;<a href="http://geoportal.doc.govt.nz/ArcGIS/rest/services/GeoportalServices/DOC_Huts/MapServer/kml/mapImage.kmz">Google Earth</a>
+<br/><br/>
+<b>Service Description:</b> 
+<br/><br/>
+<b>Description:</b> 
+<br/><br/>
+<b>Copyright Text:</b> 
+<br/><br/>
+<b>Layers: </b>DOC Huts<br /><br />
+<b>Full Extent: </b>[25915.3846905732, 4227110.98859911] - [3038236.99270675, 6684733.98848954]
+<br/><br/>
+<b>Supported Interfaces: </b>
+&nbsp;&nbsp;<a href="http://geoportal.doc.govt.nz/ArcGIS/rest/services/GeoportalServices/DOC_Huts/MapServer?f=json&pretty=true">REST</a>
+&nbsp;&nbsp;<a href="http://geoportal.doc.govt.nz/arcgis/services/GeoportalServices/DOC_Huts/MapServer?wsdl">SOAP</a>
+&nbsp;&nbsp;<a href="http://geoportal.doc.govt.nz/arcgis/services/GeoportalServices/DOC_Huts/MapServer/WMSServer?request=GetCapabilities&service=WMS">WMS</a>
+&nbsp;&nbsp;<a href="http://geoportal.doc.govt.nz/arcgis/services/GeoportalServices/DOC_Huts/MapServer/WFSServer?request=GetCapabilities&service=WFS">WFS</a>
+<br/>
+]]></description>
+      <LookAt>
+        <longitude>0</longitude>
+        <latitude>-40.5470944224915</latitude>
+        <range>2500000</range>
+      </LookAt>
+      <Point>
+        <coordinates>0,-40.5470944224915,0</coordinates>
+      </Point>
+    </Placemark>
+  </Document>
+</kml>
