@@ -36,5 +36,28 @@ function api(action, request, response){
 			};
 			response.end(JSON.stringify(data));
 		});
+	}else if(action == '/campsites'){
+		db.all('SELECT * FROM campsite', function(err, rows){
+			var data = {
+				rows: rows
+			};
+			response.end(JSON.stringify(data));
+		});
+	}else if(action == '/tracks'){
+		db.all('SELECT * FROM track', function(err, rows){
+			var data = {
+				rows: []
+			};
+			for(var i in rows){
+				var row = rows[i];
+				data.rows.push({
+					ID: row.ID,
+					name: row.name,
+					desc: row.desc,
+					paths: JSON.parse(row.path_json)
+				});
+			}
+			response.end(JSON.stringify(data));
+		});
 	}
 }
